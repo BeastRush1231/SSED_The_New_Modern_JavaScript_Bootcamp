@@ -7,13 +7,7 @@ class Timer {
     this.startButton.addEventListener('click', this.start);
   }
 
-  start() {
-    this.importantMethodToCall();
-  }
-
-  importantMethodToCall(){
-    console.log('IMPORTANT THING WAS DONE');
-  }
+  start = () => {};
 }
 
 const durationInput = document.querySelector('#duration');
