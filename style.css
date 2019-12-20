@@ -1,3 +1,10 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 .dial {
   height: 400px;
   width: 400px;
@@ -5,16 +12,7 @@
 
 .timer {
   position: relative;
-  display: inline-block;
-}
-
-* {
-  font: inherit;
-}
-
-body {
-  font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans',
-    'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  display: flex;
 }
 
 .timer input {
@@ -31,19 +29,8 @@ body {
   cursor: pointer;
 }
 
-.timer button:focus {
+.timer button:focus, .timer input:focus {
   outline: none;
-}
-
-.timer input:focus {
-  outline: none;
-}
-
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
 }
 
 .controls {
