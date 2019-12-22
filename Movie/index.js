@@ -74,6 +74,16 @@ const runComparsion = () => {
 };
 
 const movieTemplate = (movieDetail) => {
+  // '$629,000,000'
+  const dollars = parseInt(
+    movieDetail.BoxOffice.replace(/\$/g, '').replace(/,/g, '')
+  );
+  const metascore = parseInt(movieDetail.Metascore);
+  const imdnRating = parseFloat(movieDetail.imdbRating);
+  const imdbVotes = parseInt(movieDetail.imdbVotes.replace(/,/g, ''));
+  
+  console.log(metascore, imdnRating, imdbVotes);
+
   return `
     <article class="media">
       <figure class="media-left">
