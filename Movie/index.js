@@ -66,7 +66,11 @@ const onMovieSelect = async (movie, summaryElement, side) => {
 }
 
 const runComparsion = () => {
-  console.log('Time for comparsion');
+  // find the first 'article' element for each movie
+  // Run a comparsion on the # of awards
+  // then apply some styling to that 'article' element
+
+
 };
 
 const movieTemplate = (movieDetail) => {
@@ -85,14 +89,17 @@ const movieTemplate = (movieDetail) => {
         </div>
       </div>
     </article>
+
+    <article data-value=62300000 class="notification is-primary">
+      <p class="title">${movieDetail.BoxOffice}</p>
+      <p class="subtitle">BoxOffice</p>
+    </article>
+
     <article class="notification is-primary">
       <p class="title">${movieDetail.Awards}</p>
       <p class="subtitle">Awards</p>
     </article>
-    <article class="notification is-primary">
-      <p class="title">${movieDetail.BoxOffice}</p>
-      <p class="subtitle">BoxOffice</p>
-    </article>
+
     <article class="notification is-primary">
       <p class="title">${movieDetail.Metascore}</p>
       <p class="subtitle">Metascore</p>
