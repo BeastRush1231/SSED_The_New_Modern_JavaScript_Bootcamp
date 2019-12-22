@@ -30,6 +30,11 @@ const resultsWrapper = document.querySelector('.results');
 
 const onInput = async (e) => {
   const movies = await fetchData(e.target.value);
+
+  if (!movies.length) {
+    dropdown.classList.remove('is-active');
+    return;
+  }
   
   resultsWrapper.innerHTML = ''; //刪除再次搜尋後的原來的結果
   dropdown.classList.add('is-active');
