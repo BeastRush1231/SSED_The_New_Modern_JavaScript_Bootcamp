@@ -14,8 +14,9 @@ const render = Render.create({
 Render.run(render);
 Runner.run(Runner.create(), engine);
 
+// (位置x axis, 位置y axis, 長, 寬)
 const shape = Bodies.rectangle(200, 200, 50, 50, {
-  isStatic: true
+  isStatic: true  //物件不會往下掉
 });
 World.add(world, shape);
 
