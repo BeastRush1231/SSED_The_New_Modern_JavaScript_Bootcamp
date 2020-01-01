@@ -123,4 +123,15 @@ const stepThroughCell = (row, column) => {
   // visited that next cell
 }
 
-stepThroughCell(1, 1);
+stepThroughCell(startRow, startColumn);
+
+horizontals.forEach( row => {
+  // console.log(row);
+  row.forEach( open => {
+    if (open === true) {
+      return;
+    }
+
+    const wall = Bodies.rectangle();
+  });
+});
