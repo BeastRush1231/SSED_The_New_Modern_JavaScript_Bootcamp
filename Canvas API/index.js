@@ -4,6 +4,7 @@ const {
   Runner, 
   World, 
   Bodies, 
+  Body
 } = Matter;
 
 const cells = 15;
@@ -193,19 +194,25 @@ World.add(world, ball);
 
 document.addEventListener('keydown', event => {
   // console.log(event);
+  const {x, y} = ball.velocity;
+  // console.log(x, y);
   if (event.keyCode === 87) {
-    console.log('move ball up');
+    // console.log('move ball up');
+    Body.setVelocity(ball, {x , y: y - 5});
   }
 
   if (event.keyCode === 68) {
-    console.log('move ball right');
+    // console.log('move ball right');
+    Body.setVelocity(ball, {x: x + 5 , y});
   }
 
   if (event.keyCode === 83) {
-    console.log('move ball down');
+    // console.log('move ball down');
+    Body.setVelocity(ball, {x , y: y + 5});
   }
 
   if (event.keyCode === 65) {
-    console.log('move ball left');
+    // console.log('move ball left');
+    Body.setVelocity(ball, {x: x - 5 , y});
   }
 });
