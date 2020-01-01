@@ -188,3 +188,24 @@ const ball = Bodies.circle(
   unitLength / 2 * .7,
 );
 World.add(world, ball);
+
+// keypresses
+
+document.addEventListener('keydown', event => {
+  // console.log(event);
+  if (event.keyCode === 87) {
+    console.log('move ball up');
+  }
+
+  if (event.keyCode === 68) {
+    console.log('move ball right');
+  }
+
+  if (event.keyCode === 83) {
+    console.log('move ball down');
+  }
+
+  if (event.keyCode === 65) {
+    console.log('move ball left');
+  }
+});
