@@ -8,11 +8,15 @@ const {
   Events
 } = Matter;
 
-const cells = 6;
+// const cells = 6;
+const cellsHorizontal = 4;
+const cellsVertical = 3;
 const width = window.innerWidth;
 const height = window.innerHeight;
 
-const unitLength = width / cells;
+// const unitLength = width / cells;
+const unitLengthX = width / cellsHorizontal;
+const uintLengthY = width / cellsVertical;
 
 const engine = Engine.create();
 engine.world.gravity.y = 0;
