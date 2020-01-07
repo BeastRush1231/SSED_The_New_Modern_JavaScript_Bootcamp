@@ -1,4 +1,15 @@
 const fs = require('fs');
-require('child_process');
 
-//https://nodejs.org/api/child_process.html
+fs.readdir('.', (err, filenames) => {
+  //EITHER
+  //err === an error object, which means something went wrong
+  //OR
+  //err === null, which means everything is OK
+
+  if (err) {
+    // err handling code here
+    console.log(err);
+  }
+
+  console.log(filenames);
+});
